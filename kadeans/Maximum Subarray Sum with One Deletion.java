@@ -1,5 +1,6 @@
 class Solution {
     public int maximumSum(int[] arr) {
+        //intu
         int ans  = arr[0];
         int nodelete = arr[0];
         int onedelete = 0;
