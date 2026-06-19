@@ -24,7 +24,8 @@ class Solution {
             }
         }
 
-        // add the last merged interval
+        // add the last merged interval 
+        // do not forget to add the last start and end to the merged interval 
         res.add(new int[]{start1, end1});
         return res.toArray(new int[res.size()][]);
     }
