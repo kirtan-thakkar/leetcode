@@ -9,6 +9,8 @@
  * }
  */
 class Solution {
+
+
     public boolean isPalindrome(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
@@ -21,6 +23,9 @@ class Solution {
         ListNode mid = slow;
         ListNode prev = null;
 
+        // reveresed the parts of the linkedlist and then 
+        // compared weather both parts are equal or not
+        // if equal then they are palindrome
         while(mid!=null){
             ListNode next = mid.next;
             mid.next = prev;
