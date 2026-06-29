@@ -32,3 +32,5 @@ class Solution {
         return res;
     }
 }
+
+// total time complexicity would be nlogn , logn of binary search and o(n) for the funding the hours
