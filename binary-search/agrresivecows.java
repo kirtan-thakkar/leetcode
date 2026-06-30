@@ -40,4 +40,5 @@ class Solution {
         return ans;
     } 
     // rememeber in such question all you need to know is how and what will be the helper 
+    //fucntion and afte that you need to appyly the nomrla binary search and get the answer
 }
