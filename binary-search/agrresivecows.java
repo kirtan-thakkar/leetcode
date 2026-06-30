@@ -31,7 +31,7 @@ class Solution {
             int guess = (low + high) / 2;
             
             if (canPlaceCows(stalls, k, guess)) {
-                ans = guess;     // mid is possible, try to find a larger distance
+                ans = guess;     // guess is possible, try to find a larger distance
                 low = guess + 1;
             } else {
                 high = guess - 1; // mid is too large, look for a smaller distance
@@ -39,5 +39,5 @@ class Solution {
         }
         return ans;
     } 
-    
+    // rememeber in such question all you need to know is how and what will be the helper 
 }
