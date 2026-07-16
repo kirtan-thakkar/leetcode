@@ -30,3 +30,4 @@ class Solution {
 }
 
 // time complexitcty would O(n+mlogn)
+// frequency map would take O(n) time and processing the heap would take O(mlogn) time
