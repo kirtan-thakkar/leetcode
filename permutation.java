@@ -16,7 +16,8 @@ class Solution {
         for(int j = i ;j<nums.length;j++){
             swap(nums,i,j);
             permuteHelper(nums, i+1, res);
-            swap(nums,i,j); //backtrack
+            swap(nums,i,j);  // here it will backtrack
+            
         }
     }
      private void swap(int[] nums, int i, int j) {
