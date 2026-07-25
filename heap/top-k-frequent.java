@@ -33,3 +33,5 @@ class Solution {
 // frequency map would take O(n) time and processing the heap would take O(mlogn) time
 
 // revised heap 
+
+// template says that whenever there is any term used like kth biggest/largest -> min heap use thase to improve time complexity and whenever there is term like smallest/min then always max heap will be used!
