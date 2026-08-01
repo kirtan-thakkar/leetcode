@@ -15,13 +15,11 @@ class Solution {
                 res.add(-1);
             }else{
                 res.add(s1.peek());
-            
             }
             s1.push(arr[i]);
-                
-            
         }
         Collections.reverse(res);
         return res;
     }
 }
+// Next greater element logic: scan from right to left, keep a decreasing stack, and record the first greater value for each item.
