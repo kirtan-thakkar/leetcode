@@ -1,48 +1,46 @@
 class Pair {
-    int index;
-    int distance;
+    int first;
+    int second;
 
-    Pair(int index, int distance) {
-        this.index = index;
-        this.distance = distance;
+    Pair(int first, int second) {
+        this.first = first;
+        this.second = second;
     }
 }
 
 class Solution {
     public int[][] kClosest(int[][] points, int k) {
 
-        // Max Heap cause 
-        // it is mentioned in the question that we neeed to find the closet points so it better to eliminate the other points which are not close
+        //used maxheap cause it is mention in the question that we need the closet points so it better to eliminate the points that are not close with optimal sol
         PriorityQueue<Pair> maxHeap = new PriorityQueue<>((a, b) -> {
-            return b.distance - a.distance;
+            if (a.second != b.second) {
+                return b.second - a.second;
+            }
+            return b.first - a.first;
         });
 
-        // Push every point into the heap
         for (int i = 0; i < points.length; i++) {
 
             int x = points[i][0];
             int y = points[i][1];
 
-            // Squared distance (no need for sqrt)
             int distance = x * x + y * y;
 
             maxHeap.add(new Pair(i, distance));
 
-            // Keep only k elements
             if (maxHeap.size() > k) {
                 maxHeap.poll();
             }
         }
 
-        // Prepare answer
         int[][] ans = new int[k][2];
         int index = 0;
 
         while (!maxHeap.isEmpty()) {
             Pair p = maxHeap.poll();
 
-            ans[index][0] = points[p.index][0];
-            ans[index][1] = points[p.index][1];
+            ans[index][0] = points[p.first][0];
+            ans[index][1] = points[p.first][1];
 
             index++;
         }
