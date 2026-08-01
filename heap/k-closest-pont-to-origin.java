@@ -11,7 +11,8 @@ class Pair {
 class Solution {
     public int[][] kClosest(int[][] points, int k) {
 
-        // Max Heap
+        // Max Heap cause 
+        // it is mentioned in the question that we neeed to find the closet points so it better to eliminate the other points which are not close
         PriorityQueue<Pair> maxHeap = new PriorityQueue<>((a, b) -> {
             return b.distance - a.distance;
         });
