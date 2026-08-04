@@ -11,7 +11,7 @@ class Solution {
 
         // {value, row, col}
         for (int i = 0; i < n; i++) {
-            minHeap.offer(new int[]{mat[i][0], i, 0});
+            minHeap.offer(new int[]{mat[i][0], i, 0}); // element , row, column
         }
 
         while (!minHeap.isEmpty()) {
