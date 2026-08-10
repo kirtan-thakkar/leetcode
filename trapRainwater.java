@@ -41,3 +41,5 @@ public class trapRainwater {
         System.out.println(trappedWater(height));
     }
 }
+
+// Command: revise trapping rain water
