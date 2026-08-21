@@ -1,3 +1,4 @@
+// revise three sum as well as explored other solutions which is more optimal
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
        Arrays.sort(nums);
